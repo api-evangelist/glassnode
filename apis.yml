@@ -1,0 +1,29 @@
+aid: glassnode
+url: https://raw.githubusercontent.com/api-evangelist/glassnode/refs/heads/main/apis.yml
+name: Glassnode
+x-type: company
+description: >-
+  Glassnode provides on-chain analytics, market intelligence, and metrics covering Bitcoin, Ethereum, and major chains. APIs serve thousands of market and on-chain indicators.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Web3
+  - Crypto
+  - On-Chain
+  - Analytics
+  - Metrics
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://glassnode.com/
+  - type: Plans
+    url: plans/glassnode-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/glassnode-rate-limits.yml
+  - type: FinOps
+    url: finops/glassnode-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
