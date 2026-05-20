@@ -54,6 +54,10 @@ apis:
       - Institutional research
       - Macro crypto market reports
 common:
+  - type: GitHubOrganization
+    url: https://github.com/glassnode
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/glassnode
   - type: Portal
     url: https://glassnode.com/
   - type: Documentation
