@@ -1,0 +1,583 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Glassnode Metrics API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Api-Key",
+      "value": "{{X-Api-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get metric metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metadata/metric",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "query",
+                "description": "Metric path, e.g. /v1/metrics/addresses/active_count"
+              }
+            ]
+          },
+          "docs": "Get metric metadata"
+        },
+        {
+          "info": {
+            "name": "List metrics (optionally filtered by asset)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metadata/metrics",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List metrics (optionally filtered by asset)"
+        },
+        {
+          "info": {
+            "name": "List supported assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metadata/assets"
+          },
+          "docs": "List supported assets"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "User",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Current-month API credit consumption",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/user/api_usage"
+          },
+          "docs": "Current-month API credit consumption"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Addresses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Number of unique addresses active in the network",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/addresses/active_count",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Number of unique addresses active in the network"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Transactions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Total transfer volume in the network",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/transactions/transfers_volume_sum",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Total transfer volume in the network"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Supply",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Supply active 1d-1w",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/supply/active_1d_1w",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Supply active 1d-1w"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Market",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Market capitalization (USD)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/market/marketcap_usd",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Market capitalization (USD)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Indicators",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Net Unrealized Profit/Loss (NUPL)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/indicators/net_unrealized_profit_loss",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Net Unrealized Profit/Loss (NUPL)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Derivatives",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Futures open interest sum",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/derivatives/futures_open_interest_sum",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "e",
+                "value": "",
+                "type": "query",
+                "description": "Exchange filter (derivatives, distribution)"
+              }
+            ]
+          },
+          "docs": "Futures open interest sum"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Options",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Options gamma exposure",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/options/options_gamma_exposure",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Options gamma exposure"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Distribution",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Aggregate balance held on exchanges",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/distribution/balance_exchanges",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Aggregate balance held on exchanges"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Treasuries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Corporate treasury balance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/treasuries/balance_companies",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Corporate treasury balance"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Macro",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "US M2 money supply",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/macro/us_money_supply_m2",
+            "params": [
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "US M2 money supply"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
