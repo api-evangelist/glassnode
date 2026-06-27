@@ -70,7 +70,7 @@ common:
     url: rate-limits/glassnode-rate-limits.yml
   - type: FinOps
     url: finops/glassnode-finops.yml
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.glassnode.com/llms.txt
 maintainers:
   - FN: Kin Lane
