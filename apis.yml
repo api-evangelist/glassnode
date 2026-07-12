@@ -54,6 +54,10 @@ apis:
       - Institutional research
       - Macro crypto market reports
 common:
+  - type: DomainSecurity
+    url: security/glassnode-domain-security.yml
+  - type: Authentication
+    url: authentication/glassnode-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/glassnode
   - type: LinkedIn
@@ -72,6 +76,8 @@ common:
     url: finops/glassnode-finops.yml
   - type: LlmsText
     url: https://docs.glassnode.com/llms.txt
+  - type: Blog
+    url: https://research.glassnode.com/feed
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

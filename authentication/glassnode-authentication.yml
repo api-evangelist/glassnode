@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/glassnode-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: apiKey
+  type: apiKey
+  in: header
+  parameter: X-Api-Key
+  description: Glassnode API key with institutional or paid plan.
+  sources:
+  - openapi/glassnode-openapi.yml
