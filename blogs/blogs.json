@@ -1,0 +1,21 @@
+{
+  "repo": "glassnode",
+  "feeds": [
+    {
+      "source": "https://research.glassnode.com/feed",
+      "feed_url": "https://research.glassnode.com/feed",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://docs.glassnode.com/llms.txt",
+      "feed_url": "https://docs.glassnode.com/llms.txt",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 17
+}
