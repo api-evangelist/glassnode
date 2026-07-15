@@ -54,6 +54,8 @@ apis:
       - Institutional research
       - Macro crypto market reports
 common:
+  - type: AgenticAccess
+    url: agentic-access/glassnode-agentic-access.yml
   - type: DomainSecurity
     url: security/glassnode-domain-security.yml
   - type: Authentication
