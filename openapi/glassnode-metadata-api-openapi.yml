@@ -1,0 +1,120 @@
+openapi: 3.1.0
+info:
+  title: Glassnode Metrics Addresses Metadata API
+  version: 1.0.0
+  description: 'Best-effort OpenAPI 3.1 description of the Glassnode on-chain and market
+
+    metrics API. Endpoints follow the /v1/metrics/{category}/{name} pattern and
+
+    return time-series data in JSON or CSV. Authentication uses an X-Api-Key
+
+    header. Sourced from https://docs.glassnode.com/.
+
+    '
+  contact:
+    name: Glassnode API Docs
+    url: https://docs.glassnode.com/
+servers:
+- url: https://api.glassnode.com
+  description: Production
+security:
+- apiKey: []
+tags:
+- name: Metadata
+paths:
+  /v1/metadata/metric:
+    get:
+      summary: Get metric metadata
+      operationId: getMetricMetadata
+      tags:
+      - Metadata
+      parameters:
+      - in: query
+        name: path
+        required: true
+        schema:
+          type: string
+        description: Metric path, e.g. /v1/metrics/addresses/active_count
+      responses:
+        '200':
+          description: Metric metadata
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MetricMetadata'
+  /v1/metadata/metrics:
+    get:
+      summary: List metrics (optionally filtered by asset)
+      operationId: listMetricsMetadata
+      tags:
+      - Metadata
+      parameters:
+      - in: query
+        name: a
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of metric metadata
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MetricMetadata'
+  /v1/metadata/assets:
+    get:
+      summary: List supported assets
+      operationId: listAssets
+      tags:
+      - Metadata
+      responses:
+        '200':
+          description: Assets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    symbol:
+                      type: string
+                    name:
+                      type: string
+components:
+  schemas:
+    MetricMetadata:
+      type: object
+      properties:
+        path:
+          type: string
+        tier:
+          type: integer
+        assets:
+          type: array
+          items:
+            type: object
+            properties:
+              symbol:
+                type: string
+              name:
+                type: string
+        resolutions:
+          type: array
+          items:
+            type: string
+        formats:
+          type: array
+          items:
+            type: string
+        currencies:
+          type: array
+          items:
+            type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+      description: Glassnode API key with institutional or paid plan.

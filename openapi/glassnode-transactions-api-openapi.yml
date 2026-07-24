@@ -1,0 +1,103 @@
+openapi: 3.1.0
+info:
+  title: Glassnode Metrics Addresses Transactions API
+  version: 1.0.0
+  description: 'Best-effort OpenAPI 3.1 description of the Glassnode on-chain and market
+
+    metrics API. Endpoints follow the /v1/metrics/{category}/{name} pattern and
+
+    return time-series data in JSON or CSV. Authentication uses an X-Api-Key
+
+    header. Sourced from https://docs.glassnode.com/.
+
+    '
+  contact:
+    name: Glassnode API Docs
+    url: https://docs.glassnode.com/
+servers:
+- url: https://api.glassnode.com
+  description: Production
+security:
+- apiKey: []
+tags:
+- name: Transactions
+paths:
+  /v1/metrics/transactions/transfers_volume_sum:
+    get:
+      summary: Total transfer volume in the network
+      operationId: getTransactionsTransfersVolumeSum
+      tags:
+      - Transactions
+      parameters:
+      - $ref: '#/components/parameters/Asset'
+      - $ref: '#/components/parameters/Interval'
+      - $ref: '#/components/parameters/Since'
+      - $ref: '#/components/parameters/Until'
+      - $ref: '#/components/parameters/Format'
+      responses:
+        '200':
+          description: Time series
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimeSeries'
+components:
+  parameters:
+    Interval:
+      in: query
+      name: i
+      schema:
+        type: string
+        enum:
+        - 10m
+        - 1h
+        - 24h
+        - 1w
+        - 1month
+        default: 24h
+    Format:
+      in: query
+      name: f
+      schema:
+        type: string
+        enum:
+        - json
+        - csv
+        default: json
+    Asset:
+      in: query
+      name: a
+      schema:
+        type: string
+        default: BTC
+      description: Asset symbol (e.g. BTC, ETH)
+    Until:
+      in: query
+      name: u
+      schema:
+        type: integer
+      description: Unix timestamp (inclusive upper bound)
+    Since:
+      in: query
+      name: s
+      schema:
+        type: integer
+      description: Unix timestamp (inclusive lower bound)
+  schemas:
+    TimeSeries:
+      type: array
+      items:
+        type: object
+        properties:
+          t:
+            type: integer
+            description: Unix timestamp
+          v:
+            type: number
+            description: Metric value
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+      description: Glassnode API key with institutional or paid plan.
