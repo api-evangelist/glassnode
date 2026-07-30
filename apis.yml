@@ -2,7 +2,20 @@ aid: glassnode
 url: https://raw.githubusercontent.com/api-evangelist/glassnode/refs/heads/main/apis.yml
 name: Glassnode
 kind: company
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/glassnode.png
 tags:
   - Web3
   - Crypto
@@ -22,37 +35,157 @@ description: >-
   proprietary signals (e.g. SOPR, MVRV, NUPL). Authentication uses an X-Api-Key header. API
   access requires an institutional plan or paid add-on.
 apis:
-  - aid: glassnode:metrics-api
-    name: Glassnode Metrics API
-    tags:
-      - On-Chain
-      - Metrics
-      - Time Series
-      - Indicators
-      - Institutional
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.glassnode.com/v1
-    humanURL: https://docs.glassnode.com/
-    description: >-
-      Time-series API for thousands of on-chain and market metrics across major crypto assets.
-      Endpoints follow /v1/metrics/{category}/{name} pattern. Data is updated daily, hourly, or
-      10-minute depending on metric. CSV and JSON output.
-    properties:
-      - type: Documentation
-        url: https://docs.glassnode.com/
-      - type: Catalog
-        url: https://docs.glassnode.com/data/metric-catalog
-      - type: Pricing
-        url: https://studio.glassnode.com/pricing
-    x-features:
-      - 1,000+ metrics across BTC, ETH, ERC-20, others
-      - SOPR, MVRV, NUPL, Realized Cap, others
-      - Time-series JSON / CSV output
-      - X-Api-Key or api_key query auth
-    x-use-cases:
-      - On-chain trading signals
-      - Institutional research
-      - Macro crypto market reports
+- aid: glassnode:metrics-api
+  name: Glassnode Metrics API
+  tags:
+  - On-Chain
+  - Metrics
+  - Time Series
+  - Indicators
+  - Institutional
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  baseURL: https://api.glassnode.com/v1
+  humanURL: https://docs.glassnode.com/
+  description: >-
+    Time-series API for thousands of on-chain and market metrics across major crypto assets. Endpoints
+    follow /v1/metrics/{category}/{name} pattern. Data is updated daily, hourly, or 10-minute depending
+    on metric. CSV and JSON output.
+  properties:
+  - type: Documentation
+    url: https://docs.glassnode.com/
+  - type: Catalog
+    url: https://docs.glassnode.com/data/metric-catalog
+  - type: Pricing
+    url: https://studio.glassnode.com/pricing
+  x-features:
+  - 1,000+ metrics across BTC, ETH, ERC-20, others
+  - SOPR, MVRV, NUPL, Realized Cap, others
+  - Time-series JSON / CSV output
+  - X-Api-Key or api_key query auth
+  x-use-cases:
+  - On-chain trading signals
+  - Institutional research
+  - Macro crypto market reports
+- aid: glassnode:glassnode-addresses-api
+  name: Glassnode Addresses API
+  description: The Addresses API from Glassnode — 1 operation(s) for addresses.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Addresses
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-addresses-api-openapi.yml
+- aid: glassnode:glassnode-derivatives-api
+  name: Glassnode Derivatives API
+  description: The Derivatives API from Glassnode — 1 operation(s) for derivatives.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Derivatives
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-derivatives-api-openapi.yml
+- aid: glassnode:glassnode-distribution-api
+  name: Glassnode Distribution API
+  description: The Distribution API from Glassnode — 1 operation(s) for distribution.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Distribution
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-distribution-api-openapi.yml
+- aid: glassnode:glassnode-indicators-api
+  name: Glassnode Indicators API
+  description: The Indicators API from Glassnode — 1 operation(s) for indicators.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Indicators
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-indicators-api-openapi.yml
+- aid: glassnode:glassnode-macro-api
+  name: Glassnode Macro API
+  description: The Macro API from Glassnode — 1 operation(s) for macro.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Macro
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-macro-api-openapi.yml
+- aid: glassnode:glassnode-market-api
+  name: Glassnode Market API
+  description: The Market API from Glassnode — 1 operation(s) for market.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Market
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-market-api-openapi.yml
+- aid: glassnode:glassnode-metadata-api
+  name: Glassnode Metadata API
+  description: The Metadata API from Glassnode — 3 operation(s) for metadata.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Metadata
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-metadata-api-openapi.yml
+- aid: glassnode:glassnode-options-api
+  name: Glassnode Options API
+  description: The Options API from Glassnode — 1 operation(s) for options.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Options
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-options-api-openapi.yml
+- aid: glassnode:glassnode-supply-api
+  name: Glassnode Supply API
+  description: The Supply API from Glassnode — 1 operation(s) for supply.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Supply
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-supply-api-openapi.yml
+- aid: glassnode:glassnode-transactions-api
+  name: Glassnode Transactions API
+  description: The Transactions API from Glassnode — 1 operation(s) for transactions.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-transactions-api-openapi.yml
+- aid: glassnode:glassnode-treasuries-api
+  name: Glassnode Treasuries API
+  description: The Treasuries API from Glassnode — 1 operation(s) for treasuries.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - Treasuries
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-treasuries-api-openapi.yml
+- aid: glassnode:glassnode-user-api
+  name: Glassnode User API
+  description: The User API from Glassnode — 1 operation(s) for user.
+  humanURL: https://docs.glassnode.com/
+  baseURL: https://api.glassnode.com/v1
+  tags:
+  - User
+  properties:
+  - type: OpenAPI
+    url: openapi/glassnode-user-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/glassnode-agentic-access.yml
