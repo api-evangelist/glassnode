@@ -1,0 +1,235 @@
+openapi: 3.1.0
+info:
+  title: Glassnode Metrics API
+  version: "1.0.0"
+  description: |
+    Best-effort OpenAPI 3.1 description of the Glassnode on-chain and market
+    metrics API. Endpoints follow the /v1/metrics/{category}/{name} pattern and
+    return time-series data in JSON or CSV. Authentication uses an X-Api-Key
+    header. Sourced from https://docs.glassnode.com/.
+  contact:
+    name: Glassnode API Docs
+    url: https://docs.glassnode.com/
+servers:
+  - url: https://api.glassnode.com
+    description: Production
+security:
+  - apiKey: []
+paths:
+  /v1/metadata/metric:
+    get:
+      summary: Get metric metadata
+      operationId: getMetricMetadata
+      tags: [Metadata]
+      parameters:
+        - in: query
+          name: path
+          required: true
+          schema: { type: string }
+          description: Metric path, e.g. /v1/metrics/addresses/active_count
+      responses:
+        "200":
+          description: Metric metadata
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/MetricMetadata" }
+  /v1/metadata/metrics:
+    get:
+      summary: List metrics (optionally filtered by asset)
+      operationId: listMetricsMetadata
+      tags: [Metadata]
+      parameters:
+        - in: query
+          name: a
+          schema: { type: string }
+      responses:
+        "200":
+          description: List of metric metadata
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/MetricMetadata" }
+  /v1/metadata/assets:
+    get:
+      summary: List supported assets
+      operationId: listAssets
+      tags: [Metadata]
+      responses:
+        "200":
+          description: Assets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    symbol: { type: string }
+                    name: { type: string }
+  /v1/user/api_usage:
+    get:
+      summary: Current-month API credit consumption
+      operationId: getApiUsage
+      tags: [User]
+      responses:
+        "200":
+          description: Usage stats
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  credits_used: { type: integer }
+                  credits_limit: { type: integer }
+  /v1/metrics/addresses/active_count:
+    get:
+      summary: Number of unique addresses active in the network
+      operationId: getAddressesActiveCount
+      tags: [Addresses]
+      parameters: [{ $ref: "#/components/parameters/Asset" }, { $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+  /v1/metrics/transactions/transfers_volume_sum:
+    get:
+      summary: Total transfer volume in the network
+      operationId: getTransactionsTransfersVolumeSum
+      tags: [Transactions]
+      parameters: [{ $ref: "#/components/parameters/Asset" }, { $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+  /v1/metrics/supply/active_1d_1w:
+    get:
+      summary: Supply active 1d-1w
+      operationId: getSupplyActive1d1w
+      tags: [Supply]
+      parameters: [{ $ref: "#/components/parameters/Asset" }, { $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+  /v1/metrics/market/marketcap_usd:
+    get:
+      summary: Market capitalization (USD)
+      operationId: getMarketcapUsd
+      tags: [Market]
+      parameters: [{ $ref: "#/components/parameters/Asset" }, { $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+  /v1/metrics/indicators/net_unrealized_profit_loss:
+    get:
+      summary: Net Unrealized Profit/Loss (NUPL)
+      operationId: getNupl
+      tags: [Indicators]
+      parameters: [{ $ref: "#/components/parameters/Asset" }, { $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+  /v1/metrics/derivatives/futures_open_interest_sum:
+    get:
+      summary: Futures open interest sum
+      operationId: getFuturesOpenInterestSum
+      tags: [Derivatives]
+      parameters: [{ $ref: "#/components/parameters/Asset" }, { $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }, { $ref: "#/components/parameters/Exchange" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+  /v1/metrics/options/options_gamma_exposure:
+    get:
+      summary: Options gamma exposure
+      operationId: getOptionsGammaExposure
+      tags: [Options]
+      parameters: [{ $ref: "#/components/parameters/Asset" }, { $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+  /v1/metrics/distribution/balance_exchanges:
+    get:
+      summary: Aggregate balance held on exchanges
+      operationId: getDistributionBalanceExchanges
+      tags: [Distribution]
+      parameters: [{ $ref: "#/components/parameters/Asset" }, { $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+  /v1/metrics/treasuries/balance_companies:
+    get:
+      summary: Corporate treasury balance
+      operationId: getTreasuriesBalanceCompanies
+      tags: [Treasuries]
+      parameters: [{ $ref: "#/components/parameters/Asset" }, { $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+  /v1/metrics/macro/us_money_supply_m2:
+    get:
+      summary: US M2 money supply
+      operationId: getMacroUsM2
+      tags: [Macro]
+      parameters: [{ $ref: "#/components/parameters/Interval" }, { $ref: "#/components/parameters/Since" }, { $ref: "#/components/parameters/Until" }, { $ref: "#/components/parameters/Format" }]
+      responses:
+        "200": { description: Time series, content: { application/json: { schema: { $ref: "#/components/schemas/TimeSeries" } } } }
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+      description: Glassnode API key with institutional or paid plan.
+  parameters:
+    Asset:
+      in: query
+      name: a
+      schema: { type: string, default: BTC }
+      description: Asset symbol (e.g. BTC, ETH)
+    Interval:
+      in: query
+      name: i
+      schema:
+        type: string
+        enum: [10m, 1h, 24h, 1w, 1month]
+        default: 24h
+    Since:
+      in: query
+      name: s
+      schema: { type: integer }
+      description: Unix timestamp (inclusive lower bound)
+    Until:
+      in: query
+      name: u
+      schema: { type: integer }
+      description: Unix timestamp (inclusive upper bound)
+    Format:
+      in: query
+      name: f
+      schema:
+        type: string
+        enum: [json, csv]
+        default: json
+    Exchange:
+      in: query
+      name: e
+      schema: { type: string }
+      description: Exchange filter (derivatives, distribution)
+  schemas:
+    TimeSeries:
+      type: array
+      items:
+        type: object
+        properties:
+          t: { type: integer, description: Unix timestamp }
+          v: { type: number, description: Metric value }
+    MetricMetadata:
+      type: object
+      properties:
+        path: { type: string }
+        tier: { type: integer }
+        assets:
+          type: array
+          items:
+            type: object
+            properties:
+              symbol: { type: string }
+              name: { type: string }
+        resolutions:
+          type: array
+          items: { type: string }
+        formats:
+          type: array
+          items: { type: string }
+        currencies:
+          type: array
+          items: { type: string }

@@ -1,0 +1,36 @@
+{
+  "provider": "glassnode",
+  "sources": [
+    "glassnode-addresses-api-openapi.yml",
+    "glassnode-derivatives-api-openapi.yml",
+    "glassnode-distribution-api-openapi.yml",
+    "glassnode-indicators-api-openapi.yml",
+    "glassnode-macro-api-openapi.yml",
+    "glassnode-market-api-openapi.yml",
+    "glassnode-metadata-api-openapi.yml",
+    "glassnode-options-api-openapi.yml",
+    "glassnode-supply-api-openapi.yml",
+    "glassnode-transactions-api-openapi.yml",
+    "glassnode-treasuries-api-openapi.yml",
+    "glassnode-user-api-openapi.yml"
+  ],
+  "outputs": [
+    "glassnode-addresses-api-openapi.yml",
+    "glassnode-derivatives-api-openapi.yml",
+    "glassnode-distribution-api-openapi.yml",
+    "glassnode-indicators-api-openapi.yml",
+    "glassnode-macro-api-openapi.yml",
+    "glassnode-market-api-openapi.yml",
+    "glassnode-metadata-api-openapi.yml",
+    "glassnode-options-api-openapi.yml",
+    "glassnode-supply-api-openapi.yml",
+    "glassnode-transactions-api-openapi.yml",
+    "glassnode-treasuries-api-openapi.yml",
+    "glassnode-user-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
