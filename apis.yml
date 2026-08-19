@@ -27,7 +27,7 @@ tags:
   - Institutional
 created: '2026-05-08'
 modified: '2026-05-08'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: >-
   Glassnode provides on-chain analytics, market intelligence, and thousands of curated metrics
   covering Bitcoin, Ethereum, and other major chains. The Glassnode API serves time-series data
