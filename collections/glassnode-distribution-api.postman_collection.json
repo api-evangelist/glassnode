@@ -1,0 +1,180 @@
+{
+  "item": [
+    {
+      "id": "8276912c-3ffc-4fb5-b31a-47f2efa0662e",
+      "name": "Distribution",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f1aae60b-a6b6-4016-adb1-4f3d00c9242c",
+          "name": "Aggregate balance held on exchanges",
+          "request": {
+            "name": "Aggregate balance held on exchanges",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "metrics",
+                "distribution",
+                "balance_exchanges"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "a",
+                  "value": "BTC",
+                  "description": "Asset symbol (e.g. BTC, ETH)"
+                },
+                {
+                  "disabled": false,
+                  "key": "i",
+                  "value": "24h"
+                },
+                {
+                  "disabled": false,
+                  "key": "s",
+                  "value": "<integer>",
+                  "description": "Unix timestamp (inclusive lower bound)"
+                },
+                {
+                  "disabled": false,
+                  "key": "u",
+                  "value": "<integer>",
+                  "description": "Unix timestamp (inclusive upper bound)"
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cd8e4c4b-5942-4ea5-a920-07b86e8304f9",
+              "name": "Time series",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "metrics",
+                    "distribution",
+                    "balance_exchanges"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "a",
+                      "value": "BTC"
+                    },
+                    {
+                      "key": "i",
+                      "value": "24h"
+                    },
+                    {
+                      "key": "s",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "u",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"t\": 1854,\n    \"v\": 2359.403950372968\n  },\n  {\n    \"t\": 1402,\n    \"v\": 7671.052438537395\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.glassnode.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Api-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "41df9287-eafd-4c4d-a16c-4df82ed7d46a",
+    "name": "Glassnode Metrics Addresses Distribution API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 description of the Glassnode on-chain and market\nmetrics API. Endpoints follow the /v1/metrics/{category}/{name} pattern and\nreturn time-series data in JSON or CSV. Authentication uses an X-Api-Key\nheader. Sourced from https://docs.glassnode.com/.\n\n\nContact Support:\n Name: Glassnode API Docs",
+      "type": "text/plain"
+    }
+  }
+}

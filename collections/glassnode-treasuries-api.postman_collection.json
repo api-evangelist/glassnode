@@ -1,0 +1,180 @@
+{
+  "item": [
+    {
+      "id": "2303c971-c050-4865-ad9e-617283f92785",
+      "name": "Treasuries",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "132a27f3-76d7-4a06-a2dc-2915c1f59fbe",
+          "name": "Corporate treasury balance",
+          "request": {
+            "name": "Corporate treasury balance",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "metrics",
+                "treasuries",
+                "balance_companies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "a",
+                  "value": "BTC",
+                  "description": "Asset symbol (e.g. BTC, ETH)"
+                },
+                {
+                  "disabled": false,
+                  "key": "i",
+                  "value": "24h"
+                },
+                {
+                  "disabled": false,
+                  "key": "s",
+                  "value": "<integer>",
+                  "description": "Unix timestamp (inclusive lower bound)"
+                },
+                {
+                  "disabled": false,
+                  "key": "u",
+                  "value": "<integer>",
+                  "description": "Unix timestamp (inclusive upper bound)"
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cf3fcfb0-1dae-481b-aa3b-7ad287a380cf",
+              "name": "Time series",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "metrics",
+                    "treasuries",
+                    "balance_companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "a",
+                      "value": "BTC"
+                    },
+                    {
+                      "key": "i",
+                      "value": "24h"
+                    },
+                    {
+                      "key": "s",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "u",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"t\": 8199,\n    \"v\": 4180.457567499988\n  },\n  {\n    \"t\": 2958,\n    \"v\": 583.8566442758208\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.glassnode.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Api-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "aad7c1c0-72aa-4729-a2bd-6f248f7be33e",
+    "name": "Glassnode Metrics Addresses Treasuries API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 description of the Glassnode on-chain and market\nmetrics API. Endpoints follow the /v1/metrics/{category}/{name} pattern and\nreturn time-series data in JSON or CSV. Authentication uses an X-Api-Key\nheader. Sourced from https://docs.glassnode.com/.\n\n\nContact Support:\n Name: Glassnode API Docs",
+      "type": "text/plain"
+    }
+  }
+}

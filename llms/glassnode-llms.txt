@@ -1,0 +1,146 @@
+# Glassnode Docs
+
+## Glassnode Docs
+
+- [Overview](https://docs.glassnode.com/introduction/readme.md)
+- [Changelog](https://docs.glassnode.com/introduction/changelog.md): Discover new features, platform improvements, bug fixes, and any methodological changes or updates to our existing metrics.
+- [2026](https://docs.glassnode.com/introduction/changelog/2026.md)
+- [2025](https://docs.glassnode.com/introduction/changelog/2025.md)
+- [2024](https://docs.glassnode.com/introduction/changelog/2024.md): New features, improvements and bug fixes.
+- [2023](https://docs.glassnode.com/introduction/changelog/2023.md): New features, improvements and bug fixes.
+- [2022](https://docs.glassnode.com/introduction/changelog/2022.md): New features, improvements and bug fixes.
+- [2021](https://docs.glassnode.com/introduction/changelog/2021.md): New features, improvements and bug fixes.
+- [2020](https://docs.glassnode.com/introduction/changelog/2020.md): New features, improvements and bug fixes.
+- [Metric Catalog](https://docs.glassnode.com/introduction/metric-catalog.md)
+- [Supported Blockchains](https://docs.glassnode.com/introduction/supported-blockchains.md)
+- [Supported Assets](https://docs.glassnode.com/introduction/supported-assets.md)
+- [Market Metrics Coverage](https://docs.glassnode.com/introduction/supported-assets/market-metrics-coverage.md)
+- [API Setup](https://docs.glassnode.com/basic-api/api.md): Welcome to the Glassnode API documentation.
+- [Data Credits](https://docs.glassnode.com/basic-api/api-credits.md)
+- [Rate Limits](https://docs.glassnode.com/basic-api/api-credits-1.md)
+- [Metadata](https://docs.glassnode.com/basic-api/metadata.md)
+- [Endpoints](https://docs.glassnode.com/basic-api/endpoints.md)
+- [Addresses](https://docs.glassnode.com/basic-api/endpoints/addresses.md)
+- [Bridges](https://docs.glassnode.com/basic-api/endpoints/bridges.md)
+- [Blockchain](https://docs.glassnode.com/basic-api/endpoints/blockchain.md)
+- [Breakdowns](https://docs.glassnode.com/basic-api/endpoints/breakdowns.md)
+- [DeFi](https://docs.glassnode.com/basic-api/endpoints/defi.md)
+- [Derivatives](https://docs.glassnode.com/basic-api/endpoints/derivatives.md)
+- [Distribution](https://docs.glassnode.com/basic-api/endpoints/distribution.md)
+- [Entities](https://docs.glassnode.com/basic-api/endpoints/entities.md)
+- [ETH 2.0](https://docs.glassnode.com/basic-api/endpoints/eth2.md)
+- [Fees](https://docs.glassnode.com/basic-api/endpoints/fees.md)
+- [Global](https://docs.glassnode.com/basic-api/endpoints/global.md)
+- [Indicators](https://docs.glassnode.com/basic-api/endpoints/indicators.md)
+- [Institutions](https://docs.glassnode.com/basic-api/endpoints/institutions.md)
+- [Lightning](https://docs.glassnode.com/basic-api/endpoints/lightning.md)
+- [Macro](https://docs.glassnode.com/basic-api/endpoints/macro.md)
+- [Market](https://docs.glassnode.com/basic-api/endpoints/market.md)
+- [Mempool](https://docs.glassnode.com/basic-api/endpoints/mempool.md)
+- [Mining](https://docs.glassnode.com/basic-api/endpoints/mining.md)
+- [Options](https://docs.glassnode.com/basic-api/endpoints/options.md)
+- [Point-In-Time](https://docs.glassnode.com/basic-api/endpoints/pit.md)
+- [Protocols](https://docs.glassnode.com/basic-api/endpoints/protocols.md)
+- [Signals](https://docs.glassnode.com/basic-api/endpoints/signals.md)
+- [Supply](https://docs.glassnode.com/basic-api/endpoints/supply.md)
+- [Transactions](https://docs.glassnode.com/basic-api/endpoints/transactions.md)
+- [Treasuries](https://docs.glassnode.com/basic-api/endpoints/treasuries.md)
+- [Bulk Endpoints](https://docs.glassnode.com/basic-api/bulk-metrics.md)
+- [x402](https://docs.glassnode.com/basic-api/x402.md)
+- [Glassnode CLI](https://docs.glassnode.com/integrations-and-tools/glassnode-cli.md)
+- [Glassnode MCP Server](https://docs.glassnode.com/integrations-and-tools/glassnode-mcp-server.md): A guide to using Glassnode's Model Context Protocol (MCP) server for AI agents.
+- [Glassnode Excel Add-In](https://docs.glassnode.com/integrations-and-tools/glassnode-excel-add-in.md): A guide to using Glassnode's Excel Add-In.
+- [Snowflake Data Sharing](https://docs.glassnode.com/integrations-and-tools/data-sharing.md)
+- [BigQuery Data Sharing](https://docs.glassnode.com/integrations-and-tools/bigquery-data-sharing.md)
+- [Timestamps and Resolutions](https://docs.glassnode.com/data/timestamps-and-resolutions.md)
+- [New Data Availability](https://docs.glassnode.com/data/data-availability.md)
+- [Datapoint Finalization](https://docs.glassnode.com/data/data-finalization.md)
+- [Point-in-Time Metrics](https://docs.glassnode.com/data/point-in-time-metrics.md)
+- [UTXO vs. Account-Based Chains](https://docs.glassnode.com/data/utxo-vs.-account-based-chains.md): UTXO (Unspent Transaction Output) and Account-Based chains are two different "accounting methods" used by blockchains to determine the provenance and ownership of coins in the network.
+- [Metric Guides](https://docs.glassnode.com/further-information/metric-guides.md)
+- [Market Capitalization](https://docs.glassnode.com/further-information/metric-guides/market-capitalization.md): The market capitalization of an asset represents the total network value of that asset.
+- [Realized Capitalization](https://docs.glassnode.com/further-information/metric-guides/realized-capitalization.md): Realized capitalization is a variation of market capitalization which values each UTXO based on the price when it was last moved.
+- [MVRV](https://docs.glassnode.com/further-information/metric-guides/mvrv.md)
+- [LTH-MVRV](https://docs.glassnode.com/further-information/metric-guides/mvrv/lth-mvrv.md): LTH-MVRV serves as an indicator of fair value, as assessed by the behaviour of long-term investors.
+- [MVRV Ratio](https://docs.glassnode.com/further-information/metric-guides/mvrv/mvrv-ratio.md): MVRV (market-value-to-realized-value) ratio is a ratio of an asset's market capitalization to its realized capitalization.
+- [MVRV-Z Score](https://docs.glassnode.com/further-information/metric-guides/mvrv/mvrv-z-score.md): The MVRV-Z Score compares market value and realized value to assess when an asset is overvalued or undervalued.
+- [STH-MVRV](https://docs.glassnode.com/further-information/metric-guides/mvrv/sth-mvrv.md): STH-MVRV serves as an indicator of fair value, as assessed by the behaviour of short-term investors.
+- [SOPR](https://docs.glassnode.com/further-information/metric-guides/sopr.md)
+- [SOPR (Spent Output Profit Ratio)](https://docs.glassnode.com/further-information/metric-guides/sopr/sopr-spent-output-profit-ratio.md): SOPR is an indicator which reflects the degree of realised profit and loss for all coins moved on-chain.
+- [aSOPR (Adjusted SOPR)](https://docs.glassnode.com/further-information/metric-guides/sopr/asopr-adjusted-sopr.md): Adjusted SOPR filters out all UTXOs with a lifespan of less than an hour from the SOPR metric to better reflect economically meaningful activity on-chain.
+- [LTH-SOPR](https://docs.glassnode.com/further-information/metric-guides/sopr/lth-sopr.md): LTH-SOPR is an indicator which reflects the degree of realised profit and loss for all coins moved on-chain that have a lifespan more than 155-days (long-term holders).
+- [STH-SOPR](https://docs.glassnode.com/further-information/metric-guides/sopr/sth-sopr.md): STH-SOPR is an indicator which reflects the degree of realised profit and loss for all coins moved on-chain that have a lifespan less than 155-days (short-term holders).
+- [Unrealized Profit/Loss](https://docs.glassnode.com/further-information/metric-guides/unrealized-profit-loss.md)
+- [NUPL (Net Unrealized Profit/Loss)](https://docs.glassnode.com/further-information/metric-guides/unrealized-profit-loss/nupl-net-unrealized-profit-loss.md): NUPL (Net Unrealized Profit/Loss) looks at the difference between Unrealized Profit and Unrealized Loss to determine whether the network as a whole is currently in a state of profit or loss.
+- [Unrealized Profit](https://docs.glassnode.com/further-information/metric-guides/unrealized-profit-loss/unrealized-profit.md): Unrealized Profit represents the total profit accrued by UTXOs which were created when the price of the asset was lower than the current price.
+- [Unrealized Loss](https://docs.glassnode.com/further-information/metric-guides/unrealized-profit-loss/unrealized-loss.md): Unrealized Loss represents the total loss accrued by UTXOs which were created when the price of the asset was higher than the current price.
+- [LTH-NUPL](https://docs.glassnode.com/further-information/metric-guides/unrealized-profit-loss/lth-nupl.md): LTH-NUPL serves as an indicator of profit and loss, as assessed by the behaviour of long-term investors.
+- [STH-NUPL](https://docs.glassnode.com/further-information/metric-guides/unrealized-profit-loss/sth-nupl.md): STH-NUPL serves as an indicator of profit and loss, as assessed by the behaviour of short-term investors.
+- [Realized Profit/Loss](https://docs.glassnode.com/further-information/metric-guides/realized-profit-loss.md)
+- [Net Realized Profit/Loss](https://docs.glassnode.com/further-information/metric-guides/realized-profit-loss/net-realized-profit-loss.md): Net Realized Profit/Loss metric presenting the net magnitude of profit, or loss realized by all holders spending coins. Realized Profit/Loss is assessed relative to the price when a coin last moved.
+- [Realized Profit](https://docs.glassnode.com/further-information/metric-guides/realized-profit-loss/realized-profit.md): Realized Profit shows the total USD profits realized of coins being spent on-chain.
+- [Realized Loss](https://docs.glassnode.com/further-information/metric-guides/realized-profit-loss/realized-loss.md): Realized Loss shows the total USD losses of coins being sold at a loss.
+- [Coin Issuance](https://docs.glassnode.com/further-information/metric-guides/coin-issuance.md)
+- [Puell Multiple](https://docs.glassnode.com/further-information/metric-guides/coin-issuance/puell-multiple.md): The Puell Multiple is a ratio of daily coin issuance (in USD) and the 365 moving average of daily coin issuance providing an oscillator derived from miner profitability and income stress.
+- [Stablecoin](https://docs.glassnode.com/further-information/metric-guides/stablecoin.md)
+- [SSR (Stablecoin Supply Ratio)](https://docs.glassnode.com/further-information/metric-guides/stablecoin/ssr-stablecoin-supply-ratio.md): The Stablecoin Supply Ratio (SSR) is the ratio between Bitcoin supply and the supply of stablecoins.
+- [Coin Days Destroyed](https://docs.glassnode.com/further-information/metric-guides/coin-days-destroyed.md)
+- [CDD (Coin Days Destroyed)](https://docs.glassnode.com/further-information/metric-guides/coin-days-destroyed/cdd-coin-days-destroyed.md): Coin Days Destroyed is a measure of economic activity which gives more weight to coins which haven't been spent for a long time.
+- [Supply-Adjusted CDD](https://docs.glassnode.com/further-information/metric-guides/coin-days-destroyed/supply-adjusted-cdd.md): Supply-Adjusted CDD accounts for the impact of time on the Coin Days Destroyed metric.
+- [Binary CDD](https://docs.glassnode.com/further-information/metric-guides/coin-days-destroyed/binary-cdd.md): Binary CDD describes whether Supply-Adjusted CDD on any given day was above or below the historical average.
+- [CYD (Coin Years Destroyed)](https://docs.glassnode.com/further-information/metric-guides/coin-days-destroyed/cyd-coin-years-destroyed.md): Coin Years Destroyed (CYD) takes the rolling sum of coin days destroyed (CDD) over the previous 365-day period as a macro indicator for annual economic activity.
+- [Supply-Adjusted CYD](https://docs.glassnode.com/further-information/metric-guides/coin-days-destroyed/supply-adjusted-cyd.md): Supply-Adjusted CYD accounts for the impact of time on the Coin Years Destroyed metric.
+- [Reserve Risk](https://docs.glassnode.com/further-information/metric-guides/coin-days-destroyed/reserve-risk.md): Reserve Risk is a cyclical indicator that tracks the risk-reward balance relative to the confidence and conviction of long-term holders.
+- [Liveliness](https://docs.glassnode.com/further-information/metric-guides/liveliness.md): Liveliness is a metric which provides insights into shifts in macro HODLing behaviour, helping to identify trends in long term holder accumulation or spending.
+- [Dormancy](https://docs.glassnode.com/further-information/metric-guides/dormancy.md)
+- [Average Coin Dormancy](https://docs.glassnode.com/further-information/metric-guides/dormancy/average-coin-dormancy.md): Average Coin Dormancy describes the average number of days that each spent coin had remained dormant before it was moved.
+- [Supply-Adjusted Dormancy](https://docs.glassnode.com/further-information/metric-guides/dormancy/supply-adjusted-dormancy.md): Supply-Adjusted Dormancy accounts for the impact that coin day accumulation by the total supply has on the Average Coin Dormancy metric
+- [Lifespan](https://docs.glassnode.com/further-information/metric-guides/lifespan.md)
+- [Spent Output Age Bands (SOAB)](https://docs.glassnode.com/further-information/metric-guides/lifespan/spent-output-age-bands-soab.md): Spent Output Age Bands (SOAB) is a metric that bundles spent coins into categories depending on their age and presents them in colour bands as a proportion of total coins moved.
+- [Average Spent Output Lifespan (ASOL)](https://docs.glassnode.com/further-information/metric-guides/lifespan/average-spent-output-lifespan-asol.md): ASOL (Average Spent Output Lifespan) is the average age (in days) of all spent transaction outputs.
+- [Median Spent Output Lifespan (MSOL)](https://docs.glassnode.com/further-information/metric-guides/lifespan/median-spent-output-lifespan-msol.md): MSOL (Median Spent Output Lifespan) is the median age (in days) of all spent transaction outputs.
+- [NVT](https://docs.glassnode.com/further-information/metric-guides/nvt.md)
+- [NVT Ratio](https://docs.glassnode.com/further-information/metric-guides/nvt/nvt-ratio.md): Network Value to Transaction (NVT) Ratio describes the relationship between market cap and transfer volumes.
+- [NVT Signal](https://docs.glassnode.com/further-information/metric-guides/nvt/nvt-signal.md): NVT Signal (NVTS) is a modified version of the NVT Ratio which uses a 90 day moving average of daily transfer volume as the denominator.
+- [Velocity](https://docs.glassnode.com/further-information/metric-guides/nvt/velocity.md): Velocity is a measure of how quickly units of currency are circulating in the network.
+- [Stock to Flow](https://docs.glassnode.com/further-information/metric-guides/stock-to-flow.md)
+- [Stock to Flow Ratio](https://docs.glassnode.com/further-information/metric-guides/stock-to-flow/stock-to-flow-ratio.md): The Stock to Flow Ratio is a model of scarcity which can be applied to predict the future price of an asset.
+- [Stock to Flow Deflection](https://docs.glassnode.com/further-information/metric-guides/stock-to-flow/stock-to-flow-deflection.md): Stock to Flow Deflection is used to determine whether an asset is overvalued or undervalued in terms of its Stock to Flow Ratio.
+- [Price Distribution](https://docs.glassnode.com/further-information/metric-guides/price-distribution.md)
+- [URPD (UTXO Realized Price Distribution)](https://docs.glassnode.com/further-information/metric-guides/price-distribution/urpd-utxo-realized-price-distribution.md): UTXO Realized Price Distribution (URPD) shows the realized price of all UTXOs on any given day.
+- [SOPD (Spent Output Price Distribution)](https://docs.glassnode.com/further-information/metric-guides/price-distribution/sopd-spent-output-price-distribution.md): Spent Output Price Distribution (SOPD) shows the volume of coins moved on-chain on any given day, and at which prices the movements occurred.
+- [Accumulation Trend Score](https://docs.glassnode.com/further-information/metric-guides/accumulation-trend-score.md): The Accumulation Trend Score is an indicator which reflects the relative size of entities that are actively accumulating/distributing coins on-chain in terms of their BTC holdings.
+- [Long and Short-Term Holder Supply](https://docs.glassnode.com/further-information/metric-guides/long-and-short-term-holder-supply.md)
+- [Supply Held by Long and Short-Term Holders](https://docs.glassnode.com/further-information/metric-guides/long-and-short-term-holder-supply/supply-held-by-long-and-short-term-holders.md): The total coin supply held by on-chain entities classified as Long-Term, or Short-Term holders.
+- [Profit/Loss (Supply)](https://docs.glassnode.com/further-information/metric-guides/profit-loss-supply.md)
+- [Percent Supply in Profit](https://docs.glassnode.com/further-information/metric-guides/profit-loss-supply/percent-supply-in-profit.md): Percent Supply in Profit highlights the percentage of the total supply which is currently in profit.
+- [Supply in Profit](https://docs.glassnode.com/further-information/metric-guides/profit-loss-supply/supply-in-profit.md): Supply in Profit represents the absolute amount of coins in a given network which are currently in profit.
+- [Supply in Loss](https://docs.glassnode.com/further-information/metric-guides/profit-loss-supply/supply-in-loss.md): Supply in Loss represents the absolute amount of coins in a given network which are currently in loss.
+- [Age Distribution](https://docs.glassnode.com/further-information/metric-guides/age-distribution.md)
+- [HODL Waves](https://docs.glassnode.com/further-information/metric-guides/age-distribution/hodl-waves.md): HODL Waves present a macro view of the age distribution of the coin supply and provides insight into changes to this age distribution arising from holding and spending behaviour.
+- [Realized Cap HODL Waves](https://docs.glassnode.com/further-information/metric-guides/age-distribution/realized-cap-hodl-waves.md): Realized Cap HODL Waves is a variant of HODL Waves that weighs active supply bands by their realized USD value (economic weight) as a proportion of the Realized Cap.
+- [Profit/Loss (UTXO)](https://docs.glassnode.com/further-information/metric-guides/profit-loss-utxo.md)
+- [Percent UTXOs in Profit](https://docs.glassnode.com/further-information/metric-guides/profit-loss-utxo/percent-utxos-in-profit.md): Percent UTXOs in Profit highlights the percentage of all UTXOs which are currently in profit.
+- [UTXOs in Profit](https://docs.glassnode.com/further-information/metric-guides/profit-loss-utxo/utxos-in-profit.md): UTXOs in Profit represents the absolute amount of UTXOs in a given network which are currently in profit.
+- [UTXOs in Loss](https://docs.glassnode.com/further-information/metric-guides/profit-loss-utxo/utxos-in-loss.md): UTXOs in Loss represents the absolute amount of UTXOs in a given network which are currently in loss.
+- [Global Metrics](https://docs.glassnode.com/further-information/metric-guides/global-metrics.md)
+- [Global Metrics Methodology](https://docs.glassnode.com/further-information/metric-guides/global-metrics/global-metrics-methodology.md): Global Metrics aggregate on-chain and market data across baskets of assets into continuous, rebalanced indices, extending the index methodology used for price to metrics like realized cap, open intere
+- [Workbench Guide](https://docs.glassnode.com/further-information/workbench-guide.md): A guide to functions available in the Workbench product on Glassnode.
+- [Frequently Asked Questions](https://docs.glassnode.com/further-information/faq.md)
+- [Exchange Data Transparency Notice](https://docs.glassnode.com/further-information/exchange-data-transparency-notice.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.glassnode.com/introduction/readme.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

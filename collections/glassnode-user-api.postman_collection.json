@@ -1,0 +1,128 @@
+{
+  "item": [
+    {
+      "id": "c945e6e3-1e8f-44ae-bc31-a27911d4583f",
+      "name": "User",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7ea27c0e-e1f4-477e-ab5d-c46ecbc11b6b",
+          "name": "Current-month API credit consumption",
+          "request": {
+            "name": "Current-month API credit consumption",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "user",
+                "api_usage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ff61917c-a63e-4fce-8b5a-d99596cf3224",
+              "name": "Usage stats",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "user",
+                    "api_usage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"credits_used\": 9360,\n  \"credits_limit\": 9418\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.glassnode.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Api-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "cfa77394-d7e3-4ba2-ba5c-7849b5b86bb8",
+    "name": "Glassnode Metrics Addresses User API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 description of the Glassnode on-chain and market\nmetrics API. Endpoints follow the /v1/metrics/{category}/{name} pattern and\nreturn time-series data in JSON or CSV. Authentication uses an X-Api-Key\nheader. Sourced from https://docs.glassnode.com/.\n\n\nContact Support:\n Name: Glassnode API Docs",
+      "type": "text/plain"
+    }
+  }
+}

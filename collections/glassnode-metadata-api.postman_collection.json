@@ -1,0 +1,309 @@
+{
+  "item": [
+    {
+      "id": "2719ceae-5ea1-4c27-9dc6-a868e2c0ff51",
+      "name": "Metadata",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "85ff6cc0-0021-4fc2-b1e7-94cdbfa0bc14",
+          "name": "Get metric metadata",
+          "request": {
+            "name": "Get metric metadata",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "metadata",
+                "metric"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "path",
+                  "value": "<string>",
+                  "description": "(Required) Metric path, e.g. /v1/metrics/addresses/active_count"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "677624e2-5a98-4310-96c1-15c07b04f6e0",
+              "name": "Metric metadata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "metadata",
+                    "metric"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "path",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"path\": \"string\",\n  \"tier\": 8691,\n  \"assets\": [\n    {\n      \"symbol\": \"string\",\n      \"name\": \"string\"\n    },\n    {\n      \"symbol\": \"string\",\n      \"name\": \"string\"\n    }\n  ],\n  \"resolutions\": [\n    \"string\",\n    \"string\"\n  ],\n  \"formats\": [\n    \"string\",\n    \"string\"\n  ],\n  \"currencies\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4a900ba4-7b5b-4838-b257-202fbae704f0",
+          "name": "List metrics (optionally filtered by asset)",
+          "request": {
+            "name": "List metrics (optionally filtered by asset)",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "metadata",
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "a",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4428101c-9185-4520-81d5-361151173bf1",
+              "name": "List of metric metadata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "metadata",
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "a",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"path\": \"string\",\n    \"tier\": 6631,\n    \"assets\": [\n      {\n        \"symbol\": \"string\",\n        \"name\": \"string\"\n      },\n      {\n        \"symbol\": \"string\",\n        \"name\": \"string\"\n      }\n    ],\n    \"resolutions\": [\n      \"string\",\n      \"string\"\n    ],\n    \"formats\": [\n      \"string\",\n      \"string\"\n    ],\n    \"currencies\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  {\n    \"path\": \"string\",\n    \"tier\": 6947,\n    \"assets\": [\n      {\n        \"symbol\": \"string\",\n        \"name\": \"string\"\n      },\n      {\n        \"symbol\": \"string\",\n        \"name\": \"string\"\n      }\n    ],\n    \"resolutions\": [\n      \"string\",\n      \"string\"\n    ],\n    \"formats\": [\n      \"string\",\n      \"string\"\n    ],\n    \"currencies\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c3019684-dc24-44c5-b74f-789ba6f067d7",
+          "name": "List supported assets",
+          "request": {
+            "name": "List supported assets",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "metadata",
+                "assets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "546d44e7-e276-497a-8dc4-a75e50ada2d9",
+              "name": "Assets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "metadata",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"symbol\": \"string\",\n    \"name\": \"string\"\n  },\n  {\n    \"symbol\": \"string\",\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.glassnode.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Api-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b9a26aa9-d745-433d-8de0-c77a4cf9a9bb",
+    "name": "Glassnode Metrics Addresses Metadata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 description of the Glassnode on-chain and market\nmetrics API. Endpoints follow the /v1/metrics/{category}/{name} pattern and\nreturn time-series data in JSON or CSV. Authentication uses an X-Api-Key\nheader. Sourced from https://docs.glassnode.com/.\n\n\nContact Support:\n Name: Glassnode API Docs",
+      "type": "text/plain"
+    }
+  }
+}

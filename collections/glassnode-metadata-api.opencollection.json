@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Glassnode Metrics Addresses Metadata API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Api-Key",
+      "value": "{{X-Api-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get metric metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metadata/metric",
+            "params": [
+              {
+                "name": "path",
+                "value": "",
+                "type": "query",
+                "description": "Metric path, e.g. /v1/metrics/addresses/active_count"
+              }
+            ]
+          },
+          "docs": "Get metric metadata"
+        },
+        {
+          "info": {
+            "name": "List metrics (optionally filtered by asset)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metadata/metrics",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List metrics (optionally filtered by asset)"
+        },
+        {
+          "info": {
+            "name": "List supported assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metadata/assets"
+          },
+          "docs": "List supported assets"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

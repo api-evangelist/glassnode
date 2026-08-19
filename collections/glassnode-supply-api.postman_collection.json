@@ -1,0 +1,180 @@
+{
+  "item": [
+    {
+      "id": "ed884ec5-db94-40aa-9b5c-28ac4e3f5c82",
+      "name": "Supply",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e77d45ac-b49d-43e7-bf61-d1ce9bbaee6d",
+          "name": "Supply active 1d-1w",
+          "request": {
+            "name": "Supply active 1d-1w",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "metrics",
+                "supply",
+                "active_1d_1w"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "a",
+                  "value": "BTC",
+                  "description": "Asset symbol (e.g. BTC, ETH)"
+                },
+                {
+                  "disabled": false,
+                  "key": "i",
+                  "value": "24h"
+                },
+                {
+                  "disabled": false,
+                  "key": "s",
+                  "value": "<integer>",
+                  "description": "Unix timestamp (inclusive lower bound)"
+                },
+                {
+                  "disabled": false,
+                  "key": "u",
+                  "value": "<integer>",
+                  "description": "Unix timestamp (inclusive upper bound)"
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d3b06dd0-ef5d-4e21-b07c-593c1a5532a6",
+              "name": "Time series",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "metrics",
+                    "supply",
+                    "active_1d_1w"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "a",
+                      "value": "BTC"
+                    },
+                    {
+                      "key": "i",
+                      "value": "24h"
+                    },
+                    {
+                      "key": "s",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "u",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"t\": 4415,\n    \"v\": 1383.7464762104557\n  },\n  {\n    \"t\": 3759,\n    \"v\": 1258.009523335839\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.glassnode.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Api-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "531ad9b1-5853-4998-9198-2efd3395c7ab",
+    "name": "Glassnode Metrics Addresses Supply API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 description of the Glassnode on-chain and market\nmetrics API. Endpoints follow the /v1/metrics/{category}/{name} pattern and\nreturn time-series data in JSON or CSV. Authentication uses an X-Api-Key\nheader. Sourced from https://docs.glassnode.com/.\n\n\nContact Support:\n Name: Glassnode API Docs",
+      "type": "text/plain"
+    }
+  }
+}

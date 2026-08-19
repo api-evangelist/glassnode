@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Glassnode Metrics Addresses API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Api-Key",
+      "value": "{{X-Api-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Addresses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Number of unique addresses active in the network",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.glassnode.com/v1/metrics/addresses/active_count",
+            "params": [
+              {
+                "name": "a",
+                "value": "",
+                "type": "query",
+                "description": "Asset symbol (e.g. BTC, ETH)"
+              },
+              {
+                "name": "i",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "s",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive lower bound)"
+              },
+              {
+                "name": "u",
+                "value": "",
+                "type": "query",
+                "description": "Unix timestamp (inclusive upper bound)"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Number of unique addresses active in the network"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
