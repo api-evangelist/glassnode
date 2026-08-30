@@ -31,7 +31,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/glassnode.
 tags:
   - Web3
   - Crypto
-  - Onchain
+  - On-Chain
   - Analytics
   - Metrics
   - Bitcoin
@@ -59,7 +59,7 @@ apis:
 - aid: glassnode:metrics-api
   name: Glassnode Metrics API
   tags:
-  - Onchain
+  - On-Chain
   - Metrics
   - Time Series
   - Indicators
