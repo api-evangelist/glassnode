@@ -2,23 +2,18 @@
   "repo": "glassnode",
   "feeds": [
     {
-      "source": "https://research.glassnode.com/feed",
-      "feed_url": "https://research.glassnode.com/feed",
-      "title": "",
-      "saved": 0,
-      "method": "feed",
-      "nature": "undetermined",
-      "nature_basis": null
-    },
-    {
       "source": "https://docs.glassnode.com/llms.txt",
       "feed_url": "https://docs.glassnode.com/llms.txt",
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://research.glassnode.com/feed",
+      "error": "HTTPError"
     }
   ],
-  "fetched": "2026-08-30T22:33:40Z",
+  "fetched": "2026-09-06T19:17:18Z",
   "post_count": 39,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
