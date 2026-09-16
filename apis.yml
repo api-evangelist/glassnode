@@ -30,32 +30,31 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/glassnode.png
 tags:
-  - Web3
-  - Crypto
-  - Onchain
-  - Analytics
-  - Metrics
-  - Bitcoin
-  - Ethereum
-  - Institutional
+- Web3
+- Crypto
+- Onchain
+- Analytics
+- Metrics
+- Bitcoin
+- Ethereum
+- Institutional
 tags_raw:
-  - Web3
-  - Crypto
-  - On-Chain
-  - Analytics
-  - Metrics
-  - Bitcoin
-  - Ethereum
-  - Institutional
+- Web3
+- Crypto
+- On-Chain
+- Analytics
+- Metrics
+- Bitcoin
+- Ethereum
+- Institutional
 created: '2026-05-08'
-modified: '2026-05-08'
+modified: '2026-09-16'
 specificationVersion: '0.23'
-description: >-
-  Glassnode provides on-chain analytics, market intelligence, and thousands of curated metrics
-  covering Bitcoin, Ethereum, and other major chains. The Glassnode API serves time-series data
-  for price, supply, addresses, transactions, derivatives, mining, market indicators, and
-  proprietary signals (e.g. SOPR, MVRV, NUPL). Authentication uses an X-Api-Key header. API
-  access requires an institutional plan or paid add-on.
+description: Glassnode provides on-chain analytics, market intelligence, and thousands of curated metrics
+  covering Bitcoin, Ethereum, and other major chains. The Glassnode API serves time-series data for price,
+  supply, addresses, transactions, derivatives, mining, market indicators, and proprietary signals (e.g.
+  SOPR, MVRV, NUPL). Authentication uses an X-Api-Key header. API access requires an institutional plan
+  or paid add-on.
 apis:
 - aid: glassnode:metrics-api
   name: Glassnode Metrics API
@@ -74,10 +73,9 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.glassnode.com/v1
   humanURL: https://docs.glassnode.com/
-  description: >-
-    Time-series API for thousands of on-chain and market metrics across major crypto assets. Endpoints
-    follow /v1/metrics/{category}/{name} pattern. Data is updated daily, hourly, or 10-minute depending
-    on metric. CSV and JSON output.
+  description: Time-series API for thousands of on-chain and market metrics across major crypto assets.
+    Endpoints follow /v1/metrics/{category}/{name} pattern. Data is updated daily, hourly, or 10-minute
+    depending on metric. CSV and JSON output.
   properties:
   - type: Documentation
     url: https://docs.glassnode.com/
@@ -217,32 +215,34 @@ apis:
   - type: OpenAPI
     url: openapi/glassnode-user-api-openapi.yml
 common:
-  - type: AgenticAccess
-    url: agentic-access/glassnode-agentic-access.yml
-  - type: DomainSecurity
-    url: security/glassnode-domain-security.yml
-  - type: Authentication
-    url: authentication/glassnode-authentication.yml
-  - type: GitHubOrganization
-    url: https://github.com/glassnode
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/glassnode
-  - type: Portal
-    url: https://glassnode.com/
-  - type: Documentation
-    url: https://docs.glassnode.com/
-  - type: Pricing
-    url: https://studio.glassnode.com/pricing
-  - type: Plans
-    url: plans/glassnode-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/glassnode-rate-limits.yml
-  - type: FinOps
-    url: finops/glassnode-finops.yml
-  - type: LlmsText
-    url: https://docs.glassnode.com/llms.txt
-  - type: Blog
-    url: https://research.glassnode.com/feed
+- type: Website
+  url: https://glassnode.com
+- type: AgenticAccess
+  url: agentic-access/glassnode-agentic-access.yml
+- type: DomainSecurity
+  url: security/glassnode-domain-security.yml
+- type: Authentication
+  url: authentication/glassnode-authentication.yml
+- type: GitHubOrganization
+  url: https://github.com/glassnode
+- type: LinkedIn
+  url: https://www.linkedin.com/company/glassnode
+- type: Portal
+  url: https://glassnode.com/
+- type: Documentation
+  url: https://docs.glassnode.com/
+- type: Pricing
+  url: https://studio.glassnode.com/pricing
+- type: Plans
+  url: plans/glassnode-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/glassnode-rate-limits.yml
+- type: FinOps
+  url: finops/glassnode-finops.yml
+- type: LlmsText
+  url: https://docs.glassnode.com/llms.txt
+- type: Blog
+  url: https://research.glassnode.com/feed
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
