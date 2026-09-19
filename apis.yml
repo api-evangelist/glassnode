@@ -148,6 +148,8 @@ apis:
   humanURL: https://docs.glassnode.com/
   baseURL: https://api.glassnode.com/v1
   tags:
+  - Markets
+  tags_raw:
   - Market
   properties:
   - type: OpenAPI
