@@ -1,18 +1,7 @@
 {
   "provider": "glassnode",
   "sources": [
-    "glassnode-addresses-api-openapi.yml",
-    "glassnode-derivatives-api-openapi.yml",
-    "glassnode-distribution-api-openapi.yml",
-    "glassnode-indicators-api-openapi.yml",
-    "glassnode-macro-api-openapi.yml",
-    "glassnode-market-api-openapi.yml",
-    "glassnode-metadata-api-openapi.yml",
-    "glassnode-options-api-openapi.yml",
-    "glassnode-supply-api-openapi.yml",
-    "glassnode-transactions-api-openapi.yml",
-    "glassnode-treasuries-api-openapi.yml",
-    "glassnode-user-api-openapi.yml"
+    "_original/glassnode-openapi.yml"
   ],
   "outputs": [
     "glassnode-addresses-api-openapi.yml",
@@ -31,6 +20,35 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "glassnode-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "glassnode-openapi.yml: declared missing tag: Addresses",
+    "glassnode-openapi.yml: declared missing tag: Derivatives",
+    "glassnode-openapi.yml: declared missing tag: Distribution",
+    "glassnode-openapi.yml: declared missing tag: Indicators",
+    "glassnode-openapi.yml: declared missing tag: Macro",
+    "glassnode-openapi.yml: declared missing tag: Market",
+    "glassnode-openapi.yml: declared missing tag: Metadata",
+    "glassnode-openapi.yml: declared missing tag: Options",
+    "glassnode-openapi.yml: declared missing tag: Supply",
+    "glassnode-openapi.yml: declared missing tag: Transactions",
+    "glassnode-openapi.yml: declared missing tag: Treasuries",
+    "glassnode-openapi.yml: declared missing tag: User",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "glassnode-addresses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-derivatives-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-distribution-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-indicators-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-macro-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-market-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-metadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-options-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-supply-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-transactions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-treasuries-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "glassnode-user-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

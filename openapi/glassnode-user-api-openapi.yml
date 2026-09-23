@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Glassnode Metrics Addresses User API
+  title: Glassnode Metrics User API
   version: 1.0.0
   description: 'Best-effort OpenAPI 3.1 description of the Glassnode on-chain and market
 
@@ -8,9 +8,7 @@ info:
 
     return time-series data in JSON or CSV. Authentication uses an X-Api-Key
 
-    header. Sourced from https://docs.glassnode.com/.
-
-    '
+    header. Sourced from https://docs.glassnode.com/.'
   contact:
     name: Glassnode API Docs
     url: https://docs.glassnode.com/
