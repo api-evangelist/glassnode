@@ -39,28 +39,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/TimeSeries'
 components:
-  schemas:
-    TimeSeries:
-      type: array
-      items:
-        type: object
-        properties:
-          t:
-            type: integer
-            description: Unix timestamp
-          v:
-            type: number
-            description: Metric value
   parameters:
-    Format:
+    Since:
       in: query
-      name: f
+      name: s
       schema:
-        type: string
-        enum:
-        - json
-        - csv
-        default: json
+        type: integer
+      description: Unix timestamp (inclusive lower bound)
+    Until:
+      in: query
+      name: u
+      schema:
+        type: integer
+      description: Unix timestamp (inclusive upper bound)
     Interval:
       in: query
       name: i
@@ -73,18 +64,27 @@ components:
         - 1w
         - 1month
         default: 24h
-    Until:
+    Format:
       in: query
-      name: u
+      name: f
       schema:
-        type: integer
-      description: Unix timestamp (inclusive upper bound)
-    Since:
-      in: query
-      name: s
-      schema:
-        type: integer
-      description: Unix timestamp (inclusive lower bound)
+        type: string
+        enum:
+        - json
+        - csv
+        default: json
+  schemas:
+    TimeSeries:
+      type: array
+      items:
+        type: object
+        properties:
+          t:
+            type: integer
+            description: Unix timestamp
+          v:
+            type: number
+            description: Metric value
   securitySchemes:
     apiKey:
       type: apiKey
