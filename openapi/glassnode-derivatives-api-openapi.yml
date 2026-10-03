@@ -41,53 +41,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/TimeSeries'
 components:
-  parameters:
-    Asset:
-      in: query
-      name: a
-      schema:
-        type: string
-        default: BTC
-      description: Asset symbol (e.g. BTC, ETH)
-    Exchange:
-      in: query
-      name: e
-      schema:
-        type: string
-      description: Exchange filter (derivatives, distribution)
-    Since:
-      in: query
-      name: s
-      schema:
-        type: integer
-      description: Unix timestamp (inclusive lower bound)
-    Until:
-      in: query
-      name: u
-      schema:
-        type: integer
-      description: Unix timestamp (inclusive upper bound)
-    Interval:
-      in: query
-      name: i
-      schema:
-        type: string
-        enum:
-        - 10m
-        - 1h
-        - 24h
-        - 1w
-        - 1month
-        default: 24h
-    Format:
-      in: query
-      name: f
-      schema:
-        type: string
-        enum:
-        - json
-        - csv
-        default: json
   schemas:
     TimeSeries:
       type: array
@@ -100,6 +53,53 @@ components:
           v:
             type: number
             description: Metric value
+  parameters:
+    Format:
+      in: query
+      name: f
+      schema:
+        type: string
+        enum:
+        - json
+        - csv
+        default: json
+    Exchange:
+      in: query
+      name: e
+      schema:
+        type: string
+      description: Exchange filter (derivatives, distribution)
+    Asset:
+      in: query
+      name: a
+      schema:
+        type: string
+        default: BTC
+      description: Asset symbol (e.g. BTC, ETH)
+    Interval:
+      in: query
+      name: i
+      schema:
+        type: string
+        enum:
+        - 10m
+        - 1h
+        - 24h
+        - 1w
+        - 1month
+        default: 24h
+    Until:
+      in: query
+      name: u
+      schema:
+        type: integer
+      description: Unix timestamp (inclusive upper bound)
+    Since:
+      in: query
+      name: s
+      schema:
+        type: integer
+      description: Unix timestamp (inclusive lower bound)
   securitySchemes:
     apiKey:
       type: apiKey
