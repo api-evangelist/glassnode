@@ -41,28 +41,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/TimeSeries'
 components:
-  schemas:
-    TimeSeries:
-      type: array
-      items:
-        type: object
-        properties:
-          t:
-            type: integer
-            description: Unix timestamp
-          v:
-            type: number
-            description: Metric value
   parameters:
-    Format:
+    Until:
       in: query
-      name: f
+      name: u
       schema:
-        type: string
-        enum:
-        - json
-        - csv
-        default: json
+        type: integer
+      description: Unix timestamp (inclusive upper bound)
     Exchange:
       in: query
       name: e
@@ -76,6 +61,15 @@ components:
         type: string
         default: BTC
       description: Asset symbol (e.g. BTC, ETH)
+    Format:
+      in: query
+      name: f
+      schema:
+        type: string
+        enum:
+        - json
+        - csv
+        default: json
     Interval:
       in: query
       name: i
@@ -88,18 +82,24 @@ components:
         - 1w
         - 1month
         default: 24h
-    Until:
-      in: query
-      name: u
-      schema:
-        type: integer
-      description: Unix timestamp (inclusive upper bound)
     Since:
       in: query
       name: s
       schema:
         type: integer
       description: Unix timestamp (inclusive lower bound)
+  schemas:
+    TimeSeries:
+      type: array
+      items:
+        type: object
+        properties:
+          t:
+            type: integer
+            description: Unix timestamp
+          v:
+            type: number
+            description: Metric value
   securitySchemes:
     apiKey:
       type: apiKey
