@@ -54,3 +54,92 @@ tool_quality:
   scored: false
   note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
     from Glimind's agent-readiness audit.
+tools:
+- name: search
+  description: Returns the list of available MCP tools for cryptocurrency data access.
+- name: fetch
+  description: Fetches a specific tool's documentation by ID.
+- name: fetch_metric
+  description: 'Fetch data for a single asset from Glassnode API.
+
+
+    Use this tool when you need to:
+
+    - Fetch data for ONE specific asset
+
+    - Get detailed data for a single cryptocurrency
+
+
+    IMPORTANT: If you need data for MULTIPLE assets, use fetch_bulk_metrics instead!
+
+    This tool should only be used for single-asset requests to avoid unnecessary API calls.'
+- name: fetch_bulk_metrics
+  description: 'Fetch data for multiple assets efficiently using Glassnode''s bulk endpoint.
+
+
+    PREFERRED: Use this tool when you need to:
+
+    - Fetch the same metric for MULTIPLE assets (2 or more)
+
+    - Compare data across different cryptocurrencies
+
+    - Get comprehensive market data for several assets
+
+    - Avoid making multiple individual API calls
+
+
+    EFFICIENCY TIP: Always batch multiple asset requests into a single call
+
+    instead of making separate fetch_metric calls for each asset.'
+- name: get_assets_list
+  description: Get a list of all cryptocurrency assets supported by Glassnode API. Use to verify asset
+    support, get correct asset symbols, or display available assets.
+- name: get_metrics_list
+  description: Get a list of all available metrics and their paths from Glassnode API. Use to find correct
+    metric paths, discover available metrics, or validate metric existence.
+- name: get_asset_metrics
+  description: Get a list of available metrics for one or more assets. Use to find supported metrics for
+    assets, filter metrics by asset, or check asset-specific metric availability.
+- name: get_metric_metadata
+  description: Get metadata for a specific metric including parameters, tier, and examples. Use after
+    get_metrics_list() to verify metric path.
+- name: get_metric_tags
+  description: Get the list of all tags used across metric metadata from Glassnode API. Use to discover
+    the available metric tags, e.g. to understand the tag vocabulary used in metric descriptors.
+- name: get_asset_tags
+  description: Get the list of all asset semantic tags from Glassnode API, optionally computed over a
+    CEL-filtered subset of assets. Use to discover the available semantic tags (e.g. stablecoin, layer1Token,
+    erc20).
+- name: get_asset_categories
+  description: Get the list of all asset categories from Glassnode API, optionally computed over a CEL-filtered
+    subset of assets. Use to discover the available asset categories (e.g. spot, futures).
+- name: get_asset_blockchains
+  description: Get the list of all blockchains on which at least one asset is supported from Glassnode
+    API, optionally computed over a CEL-filtered subset of assets.
+- name: get_articles
+  description: Get premium research articles from Glassnode Insights - institutional-grade on-chain market
+    intelligence featuring Market Pulse, Week On-chain analysis, Market Vectors, Partner Reports, and
+    exclusive research. Access professional-grade insights into Bitcoin, Ethereum, DeFi, and altcoin markets
+    with directional market analysis, systematic feature discovery, and comprehensive on-chain data interpretation.
+- name: get_article
+  description: Get a specific premium research article from Glassnode Insights by slug or ID. Access detailed
+    institutional-grade market intelligence including full article content, HTML markup, and metadata.
+    Retrieve comprehensive on-chain analysis, market vectors, systematic research, and exclusive insights
+    for Bitcoin, Ethereum, DeFi, and altcoin markets.
+- name: path_to_metric_code
+  description: 'Convert a metric path to a metric code for use in Glassnode Studio.
+
+
+    This tool helps convert metric paths (e.g., ''market/price_usd_close'') to metric codes
+
+    (e.g., ''market.PriceUsdClose'') that can be used in Studio link generation.
+
+
+    Use this tool when:
+
+    - Users ask for Studio links
+
+    - You need to provide metric codes for external tools
+
+    - Converting API paths to Studio-compatible identifiers'
+tools_count: 15
