@@ -1,4 +1,4 @@
-# Glassnode (glassnode)
+# Glassnode
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,62 +66,148 @@
 
 Glassnode provides on-chain analytics, market intelligence, and thousands of curated metrics covering Bitcoin, Ethereum, and other major chains. The Glassnode API serves time-series data for price, supply, addresses, transactions, derivatives, mining, market indicators, and proprietary signals (e.g. SOPR, MVRV, NUPL). Authentication uses an X-Api-Key header. API access requires an institutional plan or paid add-on.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/glassnode/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/glassnode/refs/heads/main/apis.yml)
+**Areas:** Web3 · Cryptocurrency · Onchain · Analytics · Metrics · Bitcoin · Ethereum · Institutional
 
-## Tags
+## Glassnode on APIs.io
 
-- Web3
-- Crypto
-- On-Chain
-- Analytics
-- Metrics
-- Bitcoin
-- Ethereum
-- Institutional
+Everything profiled for Glassnode is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/glassnode/](https://apis.io/providers/glassnode/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (13)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [Glassnode Metrics API](https://apis.io/apis/glassnode/metrics-api/) — Time-series API for thousands of on-chain and market metrics across major crypto assets. Endpoints follow /v1/metrics/{category}/{name} pattern. Data is…
+- [Glassnode Addresses API](https://apis.io/apis/glassnode/glassnode-addresses-api/) — The Addresses API from Glassnode — 1 operation(s) for addresses.
+- [Glassnode Derivatives API](https://apis.io/apis/glassnode/glassnode-derivatives-api/) — The Derivatives API from Glassnode — 1 operation(s) for derivatives.
+- [Glassnode Distribution API](https://apis.io/apis/glassnode/glassnode-distribution-api/) — The Distribution API from Glassnode — 1 operation(s) for distribution.
+- [Glassnode Indicators API](https://apis.io/apis/glassnode/glassnode-indicators-api/) — The Indicators API from Glassnode — 1 operation(s) for indicators.
+- [Glassnode Macro API](https://apis.io/apis/glassnode/glassnode-macro-api/) — The Macro API from Glassnode — 1 operation(s) for macro.
+- [Glassnode Market API](https://apis.io/apis/glassnode/glassnode-market-api/) — The Market API from Glassnode — 1 operation(s) for market.
+- [Glassnode Metadata API](https://apis.io/apis/glassnode/glassnode-metadata-api/) — The Metadata API from Glassnode — 3 operation(s) for metadata.
+- [Glassnode Options API](https://apis.io/apis/glassnode/glassnode-options-api/) — The Options API from Glassnode — 1 operation(s) for options.
+- [Glassnode Supply API](https://apis.io/apis/glassnode/glassnode-supply-api/) — The Supply API from Glassnode — 1 operation(s) for supply.
+- [Glassnode Transactions API](https://apis.io/apis/glassnode/glassnode-transactions-api/) — The Transactions API from Glassnode — 1 operation(s) for transactions.
+- [Glassnode Treasuries API](https://apis.io/apis/glassnode/glassnode-treasuries-api/) — The Treasuries API from Glassnode — 1 operation(s) for treasuries.
+- [Glassnode User API](https://apis.io/apis/glassnode/glassnode-user-api/) — The User API from Glassnode — 1 operation(s) for user.
 
-## APIs
+### Published properties
 
-### Glassnode Metrics API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Time-series API for thousands of on-chain and market metrics across major crypto assets. Endpoints follow /v1/metrics/{category}/{name} pattern. Data is updated daily, hourly, or 10-minute depending on metric. CSV and JSON output.
+#### MCP servers (1)
 
-- **Human URL:** [https://docs.glassnode.com/](https://docs.glassnode.com/)
-- **Base URL:** `https://api.glassnode.com/v1`
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags
+- [Moved to /providers/glassnode/](https://apis.io/servers/glassnode/glassnode/)
 
-- On-Chain
-- Metrics
-- Time Series
-- Indicators
-- Institutional
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
+- [Glassnode Agentic Access](https://apis.io/agentic-access/glassnode/glassnode-agentic-access/)
+
+#### Collections (13)
+
+Postman and Open Collection request collections.
+
+- [Glassnode Metrics API](https://apis.io/collections/glassnode/open-glassnode/)
+- [Glassnode Metrics Addresses API](https://apis.io/collections/glassnode/open-glassnode-addresses-api/)
+- [Glassnode Metrics Addresses Derivatives API](https://apis.io/collections/glassnode/open-glassnode-derivatives-api/)
+- [Glassnode Metrics Addresses Distribution API](https://apis.io/collections/glassnode/open-glassnode-distribution-api/)
+- [Glassnode Metrics Addresses Indicators API](https://apis.io/collections/glassnode/open-glassnode-indicators-api/)
+- [Glassnode Metrics Addresses Macro API](https://apis.io/collections/glassnode/open-glassnode-macro-api/)
+- [Glassnode Metrics Addresses Market API](https://apis.io/collections/glassnode/open-glassnode-market-api/)
+- [Glassnode Metrics Addresses Metadata API](https://apis.io/collections/glassnode/open-glassnode-metadata-api/)
+- [Glassnode Metrics Addresses Options API](https://apis.io/collections/glassnode/open-glassnode-options-api/)
+- [Glassnode Metrics Addresses Supply API](https://apis.io/collections/glassnode/open-glassnode-supply-api/)
+- [Glassnode Metrics Addresses Transactions API](https://apis.io/collections/glassnode/open-glassnode-transactions-api/)
+- [Glassnode Metrics Addresses Treasuries API](https://apis.io/collections/glassnode/open-glassnode-treasuries-api/)
+- [Glassnode Metrics Addresses User API](https://apis.io/collections/glassnode/open-glassnode-user-api/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Glassnode Authentication](https://apis.io/security/glassnode/glassnode-authentication/)
+- [Glassnode Domain Security](https://apis.io/security/glassnode/glassnode-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Glassnode Plans Pricing](https://apis.io/plans/glassnode/glassnode-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Glassnode Rate Limits](https://apis.io/rate-limits/glassnode/glassnode-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Glassnode Finops](https://apis.io/finops/glassnode/glassnode-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://glassnode.com)
 - [Documentation](https://docs.glassnode.com/)
-- [Catalog](https://docs.glassnode.com/data/metric-catalog)
 - [Pricing](https://studio.glassnode.com/pricing)
-- [Postman Collection](collections/glassnode.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/glassnode.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Blog](https://research.glassnode.com/feed)
+- [GitHub](https://github.com/glassnode)
 
-## Common Properties
+## API Evangelist rating
 
-- [GitHub Organization](https://github.com/glassnode)
-- [LinkedIn](https://www.linkedin.com/company/glassnode)
-- [Portal](https://glassnode.com/)
-- [Documentation](https://docs.glassnode.com/)
-- [Pricing](https://studio.glassnode.com/pricing)
-- [Plans](plans/glassnode-plans-pricing.yml)
-- [Rate Limits](rate-limits/glassnode-rate-limits.yml)
-- [Fin Ops](finops/glassnode-finops.yml)
-- [L L Ms Txt](https://docs.glassnode.com/llms.txt)
+**Kin Score 29.7** — thin · rubric 0.25.0 · scored 2026-10-23
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 18.4 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 31.2** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/glassnode/](https://apis.io/providers/glassnode/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Glassnode: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/glassnode/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
